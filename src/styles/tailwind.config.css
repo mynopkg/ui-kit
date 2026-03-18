@@ -1,16 +1,23 @@
 @theme {
-  /* [Light Mode] Base Color */
+  /* [Light Mode] */
   --color-primary: #fb923c;
   --color-primary-foreground: #ffffff;
   --color-secondary: #ffe4c4;
   --color-background: #ffffff;
   --color-foreground: #020817;
-  /* [Dark Mode] Base Color */
-  @variant dark (&:where(.dark, .dark *)) {
+  --color-disabled: #adb5bd;
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  /* [Dark Mode] */
+  .dark {
     --color-primary: #fdba74;
     --color-primary-foreground: #020817;
-    --color-secondary: #7c2d12;
+    --color-secondary: #ffe4c4;
     --color-background: #0f172a;
     --color-foreground: #f8fafc;
+    --color-disabled: #adb5bd;
   }
 }
