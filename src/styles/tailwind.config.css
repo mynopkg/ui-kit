@@ -15,7 +15,9 @@
   .dark {
     --color-primary: #fdba74;
     --color-primary-foreground: #020817;
+    --color-secondary: #ffe4c4;
     --color-background: #0f172a;
     --color-foreground: #f8fafc;
+    --color-disabled: #adb5bd;
   }
 }
