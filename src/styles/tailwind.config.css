@@ -6,6 +6,7 @@
   --color-background: #ffffff;
   --color-foreground: #020817;
   --color-disabled: #adb5bd;
+  --color-error: #e11d48;
 }
 
 @variant dark (&:where(.dark, .dark *));
@@ -19,5 +20,6 @@
     --color-background: #0f172a;
     --color-foreground: #f8fafc;
     --color-disabled: #adb5bd;
+    --color-error: #e11d48;
   }
 }
