@@ -7,6 +7,7 @@
   --color-foreground: #020817;
   --color-disabled: #adb5bd;
   --color-error: #e11d48;
+  --shadow-base: 0 8px 20px -6px rgba(0, 0, 0, 0.1);
 }
 
 @variant dark (&:where(.dark, .dark *));
@@ -21,5 +22,6 @@
     --color-foreground: #f8fafc;
     --color-disabled: #adb5bd;
     --color-error: #e11d48;
+    --shadow-base: 0 8px 20px -6px rgba(0, 0, 0, 0.1);
   }
 }

@@ -3,7 +3,7 @@ import { cva } from 'class-variance-authority'
 export const inputVariants = cva(
   [
     'w-full border px-2 py-1 rounded-xl text-sm font-medium',
-    'transition-all duration-300 ease-in-out hover:shadow-[0_8px_20px_-6px_rgba(0,0,0,0.1)]',
+    'transition-all duration-300 ease-in-out hover:shadow-base',
     'focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary',
   ],
   {
