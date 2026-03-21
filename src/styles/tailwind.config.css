@@ -6,6 +6,11 @@
   --color-background: #ffffff;
   --color-foreground: #020817;
   --color-disabled: #adb5bd;
+  --color-error: #e11d48;
+  --color-success: #10b981;
+  --color-warning: #facc15;
+  --color-ground: #334155;
+  --shadow-base: 0 8px 20px -6px rgba(0, 0, 0, 0.1);
 }
 
 @variant dark (&:where(.dark, .dark *));
@@ -19,5 +24,10 @@
     --color-background: #0f172a;
     --color-foreground: #f8fafc;
     --color-disabled: #adb5bd;
+    --color-error: #e11d48;
+    --color-success: #10b981;
+    --color-warning: #facc15;
+    --color-ground: ##334155;
+    --shadow-base: 0 8px 20px -6px rgba(0, 0, 0, 0.1);
   }
 }
