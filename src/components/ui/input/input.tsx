@@ -1,16 +1,16 @@
-import type { InputHTMLAttributes, ReactNode } from 'react'
+import type { ComponentPropsWithoutRef, ElementRef, ReactNode } from 'react'
 import type { VariantProps } from 'class-variance-authority'
 import { forwardRef, useId } from 'react'
 import { cn } from '@/lib/utils'
 import { inputVariants } from './input-variants'
 
 export interface InputProps
-  extends InputHTMLAttributes<HTMLInputElement>, VariantProps<typeof inputVariants> {
+  extends ComponentPropsWithoutRef<'input'>, VariantProps<typeof inputVariants> {
   isInvalid?: boolean
   rightIcon?: ReactNode
 }
 
-export const Input = forwardRef<HTMLInputElement, InputProps>(
+export const Input = forwardRef<ElementRef<'input'>, InputProps>(
   ({ className, variant, id, isInvalid, rightIcon, ...props }, ref) => {
     const generatedId = useId()
     const inputId = id ?? generatedId
