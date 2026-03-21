@@ -19,6 +19,11 @@
   "engines": {
     "node": ">=20.19.0"
   },
+  "pnpm": {
+    "overrides": {
+      "flatted": ">=3.4.2"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
