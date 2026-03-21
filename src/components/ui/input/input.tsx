@@ -1,38 +1,38 @@
-import type { InputHTMLAttributes } from 'react'
+import type { InputHTMLAttributes, ReactNode } from 'react'
 import type { VariantProps } from 'class-variance-authority'
 import { forwardRef, useId } from 'react'
-import { Label } from '@radix-ui/react-label'
 import { cn } from '@/lib/utils'
 import { inputVariants } from './input-variants'
 
-type InputVariantProps = VariantProps<typeof inputVariants>
-
 export interface InputProps
-  extends InputHTMLAttributes<HTMLInputElement>, Omit<InputVariantProps, 'variant'> {
-  label?: string
-  error?: string
+  extends InputHTMLAttributes<HTMLInputElement>, VariantProps<typeof inputVariants> {
+  isInvalid?: boolean
+  rightIcon?: ReactNode
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ className, label, error, id, ...props }, ref) => {
+  ({ className, variant, id, isInvalid, rightIcon, ...props }, ref) => {
     const generatedId = useId()
     const inputId = id ?? generatedId
-    const currentVariant = error ? 'error' : 'default'
+    const errorId = `${inputId}-error`
 
     return (
-      <div className={cn('flex w-full flex-col gap-1', className)}>
-        {label && (
-          <Label htmlFor={inputId} className="text-sm font-semibold">
-            {label}
-          </Label>
-        )}
+      <div className={cn('relative')}>
         <input
-          id={inputId}
           ref={ref}
-          className={cn(inputVariants({ variant: currentVariant }))}
+          id={inputId}
+          aria-invalid={isInvalid}
+          aria-describedby={isInvalid ? errorId : undefined}
+          className={cn(
+            inputVariants({ variant: isInvalid ? 'error' : variant, className }),
+          )}
           {...props}
         />
-        {error && <p className={cn('text-error text-xs font-semibold')}>{error}</p>}
+        {rightIcon && (
+          <div className="absolute top-1/2 right-3 flex -translate-y-1/2 items-center justify-center">
+            {rightIcon}
+          </div>
+        )}
       </div>
     )
   },
