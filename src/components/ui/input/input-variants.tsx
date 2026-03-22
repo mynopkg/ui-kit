@@ -10,14 +10,14 @@ export const inputVariants = cva(
   {
     variants: {
       variant: {
-        info: 'border-ground/25 focus:border-primary',
+        default: 'border-ground/25 focus:border-primary',
         error: 'border-error/85 focus:border-error focus-visible:ring-error',
         success: 'border-success/85 focus:border-success focus-visible:ring-success',
         warning: 'border-warning/85 focus:border-warning focus-visible:ring-warning',
       },
     },
     defaultVariants: {
-      variant: 'info',
+      variant: 'default',
     },
   },
 )

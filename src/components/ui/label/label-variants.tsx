@@ -1,9 +1,9 @@
 import { cva } from 'class-variance-authority'
 
-export const formMessageVariants = cva(['text-xs font-semibold'], {
+export const labelVariants = cva(['text-sm font-semibold'], {
   variants: {
     variant: {
-      default: 'text-ground',
+      default: '',
       error: 'text-error',
       success: 'text-success',
       warning: 'text-warning',
