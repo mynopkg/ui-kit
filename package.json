@@ -21,7 +21,7 @@
   },
   "pnpm": {
     "overrides": {
-      "flatted": ">=3.4.2"
+      "flatted": "3.4.2"
     }
   },
   "scripts": {
