@@ -16,14 +16,14 @@ export interface LabelProps
 export const Label = forwardRef<ElementRef<typeof LabelPrimitive>, LabelProps>(
   ({ className, variant, htmlFor, children, ...props }, ref) => {
     return (
-      <Label
+      <LabelPrimitive
         ref={ref}
         htmlFor={htmlFor}
         className={cn(labelVariants({ variant, className }))}
         {...props}
       >
         {children}
-      </Label>
+      </LabelPrimitive>
     )
   },
 )
