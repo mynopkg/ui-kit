@@ -31,8 +31,8 @@ export const switchThumbVariants = cva(
   {
     variants: {
       thumbShape: {
-        default: 'h-4.5 w-6 data-[state=checked]:translate-x-4',
-        circle: 'size-4.5 data-[state=checked]:translate-x-5.5',
+        default: 'h-[18px] w-6 data-[state=checked]:translate-x-4',
+        circle: 'size-[18px] data-[state=checked]:translate-x-[22px]',
       },
     },
     defaultVariants: {
