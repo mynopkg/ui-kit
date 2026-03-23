@@ -1,4 +1,9 @@
 @theme {
+  /* [Font] */
+  --font-sans:
+    'Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto',
+    'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic',
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'sans-serif';
   /* [Light Mode] */
   --color-primary: #fb923c;
   --color-primary-foreground: #ffffff;
@@ -27,7 +32,7 @@
     --color-error: #e11d48;
     --color-success: #10b981;
     --color-warning: #facc15;
-    --color-ground: ##334155;
+    --color-ground: #334155;
     --shadow-base: 0 8px 20px -6px rgba(0, 0, 0, 0.1);
   }
 }
