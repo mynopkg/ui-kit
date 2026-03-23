@@ -5,6 +5,7 @@ export const switchVariants = cva(
     'relative cursor-pointer rounded-xl bg-disabled outline-none',
     'transition-colors duration-200',
     'focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 data-[state=checked]:bg-primary',
+    'disabled:cursor-not-allowed',
   ],
   {
     variants: {
@@ -31,12 +32,12 @@ export const switchThumbVariants = cva(
   {
     variants: {
       thumbShape: {
-        default: 'h-[18px] w-6 data-[state=checked]:translate-x-4',
+        pill: 'h-[18px] w-6 data-[state=checked]:translate-x-4',
         circle: 'size-[18px] data-[state=checked]:translate-x-[22px]',
       },
     },
     defaultVariants: {
-      thumbShape: 'default',
+      thumbShape: 'pill',
     },
   },
 )
