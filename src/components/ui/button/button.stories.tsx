@@ -42,6 +42,7 @@ export const WithRightIcon: ButtonStory = {
 
 export const AsChild: ButtonStory = {
   args: {
+    asChild: true,
     children: (
       <a href="https://www.github.com" target="_blank" rel="noopener noreferrer">
         Link to GitHub
