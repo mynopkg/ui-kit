@@ -11,9 +11,7 @@ overrides:
 
 importers:
 
-  .: {}
-
-  packages/ui:
+  .:
     dependencies:
       '@radix-ui/react-label':
         specifier: ^2.1.8
