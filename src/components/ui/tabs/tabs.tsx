@@ -16,18 +16,37 @@ import {
 
 interface Tab {
   value: string
-  label: string
+  label: ReactNode
   content: ReactNode
   disabled?: boolean
+}
+
+interface TabsClassNames {
+  tabsList?: string
+  tabsTrigger?: string
+  tabsContent?: string
 }
 
 export interface TabsProps extends ComponentPropsWithoutRef<typeof TabsPrimitive> {
   tabs: Tab[]
   variant?: 'default' | 'underline'
+  slotClassNames?: TabsClassNames
 }
 
 export const Tabs = forwardRef<ElementRef<typeof TabsPrimitive>, TabsProps>(
-  ({ tabs, variant, defaultValue, value, className, onValueChange, ...props }, ref) => {
+  (
+    {
+      tabs,
+      variant,
+      defaultValue,
+      value,
+      className,
+      slotClassNames,
+      onValueChange,
+      ...props
+    },
+    ref,
+  ) => {
     return (
       <TabsPrimitive
         ref={ref}
@@ -37,13 +56,18 @@ export const Tabs = forwardRef<ElementRef<typeof TabsPrimitive>, TabsProps>(
         className={cn(tabsVariants({ variant }), className)}
         {...props}
       >
-        <TabsListPrimitive className={cn(tabsListVariants({ variant }))}>
+        <TabsListPrimitive
+          className={cn(tabsListVariants({ variant }), slotClassNames?.tabsList)}
+        >
           {tabs.map((tab) => (
             <TabsTriggerPrimitive
               value={tab.value}
               key={tab.value}
               disabled={tab.disabled}
-              className={cn(tabsTriggerVariants({ variant }))}
+              className={cn(
+                tabsTriggerVariants({ variant }),
+                slotClassNames?.tabsTrigger,
+              )}
             >
               {tab.label}
             </TabsTriggerPrimitive>
@@ -54,7 +78,7 @@ export const Tabs = forwardRef<ElementRef<typeof TabsPrimitive>, TabsProps>(
           <TabsContentPrimitive
             key={tab.value}
             value={tab.value}
-            className={cn(tabsContentVariants({ variant }))}
+            className={cn(tabsContentVariants({ variant }), slotClassNames?.tabsContent)}
           >
             {tab.content}
           </TabsContentPrimitive>
