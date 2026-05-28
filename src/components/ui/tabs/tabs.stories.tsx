@@ -63,7 +63,7 @@ export const Underline: TabsStory = {
         ))}
       </TabsList>
       {tabsMock.map((tab) => (
-        <TabsContent value={tab.value}>
+        <TabsContent key={tab.value} value={tab.value}>
           <div className="p-4">{`Content for ${tab.label}`}</div>
         </TabsContent>
       ))}
@@ -85,7 +85,7 @@ export const Disabled: TabsStory = {
         ))}
       </TabsList>
       {disabledTabsMock.map((tab) => (
-        <TabsContent value={tab.value}>
+        <TabsContent key={tab.value} value={tab.value}>
           <div className="p-4">{`Content for ${tab.label}`}</div>
         </TabsContent>
       ))}
