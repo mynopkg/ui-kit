@@ -1,3 +1,4 @@
+import type { VariantProps } from 'class-variance-authority'
 import { cva } from 'class-variance-authority'
 
 export const tabsVariants = cva(['w-full'], {
@@ -63,3 +64,5 @@ export const tabsContentVariants = cva(
     },
   },
 )
+
+export type TabsVariant = VariantProps<typeof tabsVariants>['variant']

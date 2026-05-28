@@ -1,5 +1,5 @@
 export type { TabsProps } from './tabs'
-export { Tabs } from './tabs'
+export { Tabs, TabsList, TabsTrigger, TabsContent } from './tabs'
 export {
   tabsVariants,
   tabsListVariants,
