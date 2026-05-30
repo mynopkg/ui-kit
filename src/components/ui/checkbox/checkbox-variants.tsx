@@ -12,10 +12,6 @@ export const checkboxVariants = cva(
   ],
   {
     variants: {
-      error: {
-        true: 'border-error/85 data-[state=checked]:bg-error data-[state=checked]:border-error focus-visible:ring-error',
-        false: 'border-ground/40 hover:border-ground/70',
-      },
       size: {
         sm: 'size-4',
         md: 'size-5',
@@ -23,7 +19,6 @@ export const checkboxVariants = cva(
       },
     },
     defaultVariants: {
-      error: false,
       size: 'md',
     },
   },

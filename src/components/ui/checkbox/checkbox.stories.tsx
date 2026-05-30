@@ -6,9 +6,6 @@ const meta: Meta<typeof Checkbox> = {
   component: Checkbox,
   tags: ['autodocs'],
   argTypes: {
-    error: {
-      control: 'boolean',
-    },
     size: {
       control: 'select',
       options: ['sm', 'md', 'lg'],
@@ -34,11 +31,5 @@ export const Medium: CheckboxStory = {
 export const Large: CheckboxStory = {
   args: {
     size: 'lg',
-  },
-}
-
-export const Error: CheckboxStory = {
-  args: {
-    error: true,
   },
 }
