@@ -23,7 +23,8 @@
     "overrides": {
       "flatted": "3.4.2",
       "@radix-ui/react-primitive": "2.1.4",
-      "@radix-ui/react-slot": "1.2.4"
+      "@radix-ui/react-slot": "1.2.4",
+      "ws": "^8.20.1"
     }
   },
   "scripts": {
