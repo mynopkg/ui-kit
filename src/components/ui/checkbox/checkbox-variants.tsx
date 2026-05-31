@@ -8,6 +8,7 @@ export const checkboxVariants = cva(
     'transition-all duration-200',
     'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary',
     'data-[state=checked]:bg-primary data-[state=checked]:border-primary data-[state=checked]:text-white',
+    'data-[state=indeterminate]:bg-primary data-[state=indeterminate]:border-primary data-[state=indeterminate]:text-white',
     'disabled:cursor-not-allowed disabled:opacity-50 disabled:pointer-events-none',
   ],
   {

@@ -5,6 +5,9 @@ const meta: Meta<typeof Checkbox> = {
   title: 'UI/Checkbox',
   component: Checkbox,
   tags: ['autodocs'],
+  args: {
+    'aria-label': 'Checkbox',
+  },
   argTypes: {
     size: {
       control: 'select',
@@ -15,6 +18,24 @@ const meta: Meta<typeof Checkbox> = {
 
 export default meta
 type CheckboxStory = StoryObj<typeof Checkbox>
+
+export const Checked: CheckboxStory = {
+  args: {
+    defaultChecked: true,
+  },
+}
+
+export const Unchecked: CheckboxStory = {
+  args: {
+    defaultChecked: false,
+  },
+}
+
+export const Indeterminate: CheckboxStory = {
+  args: {
+    defaultChecked: 'indeterminate',
+  },
+}
 
 export const Small: CheckboxStory = {
   args: {
