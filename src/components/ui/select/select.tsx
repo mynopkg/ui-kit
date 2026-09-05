@@ -69,7 +69,7 @@ export const SelectTrigger = forwardRef<
       className={cn(selectTriggerVariants({ variant, className }))}
       {...props}
     >
-      {children || <SelectValue />}
+      {children ?? <SelectValue />}
       <SelectIcon asChild>
         <ChevronDown className="h-4 w-4 opacity-50" />
       </SelectIcon>
